@@ -11,82 +11,37 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
     home:Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.tealAccent[700],
+        title: const Center(child: Text('Mi-Card')),
+      ),
     backgroundColor: Colors.teal,
   body: SafeArea(
     child: Column(
-      // verticalDirection: VerticalDirection.up,
-      // mainAxisSize: MainAxisSize.min,
-      // mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 100.0,
-              width: 300.0,
-              color: Colors.white,
-              child: Text('Container 1'),
-            ),
-            Container(width: 110,
-              height: 100.0,
-              color: Colors.blue,
-              child: Text('Container 2'),
-            ),
-          ],
+       const CircleAvatar(
+         radius: 50.0,
+         backgroundColor: Colors.red,
+         backgroundImage: AssetImage('images/women.jpg'),
+       ),
+        Text(
+          'Ketan Raj',
+          style: TextStyle(
+            fontFamily: 'Pacifico',
+            fontWeight: FontWeight.bold,
+            fontSize: 20.0,
+            color: Colors.white,
+          ),
         ),
-      Row(
-        children: [
-            Column(
-              // verticalDirection: VerticalDirection.up,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(width: 100,
-                  height: 100.0,
-                  color: Colors.red,
-                  child: Text('Container 4'),
-                ),
-                Container(width: 100,
-                  height: 100.0,
-                  color: Colors.red,
-                ),
-              ],
-            ),
-          Column(
-            children: [
-              Row(
-                verticalDirection: VerticalDirection.up,
-                children: [
-                  Container(width: 200,
-                    height: 100.0,
-                    color: Colors.grey,
-                    child: Text('Container 3'),
-                  ),
-                  Container(width: 110,
-                    height: 100.0,
-                    color: Colors.blue,
-                    // child: Text('Container 5'),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                verticalDirection: VerticalDirection.up,
-                children: [
-                  Container(
-                    width: 310,
-                    height: 100,
-                    color: Colors.green,
-                    child: Text('Container 6'),
-                  )
-                ],
-              )
-
-            ],
-          )
-        ],
-      )
-
-
+        Text('Flutter Developer',
+          style: TextStyle(
+            fontFamily:'Source Sans Pro',
+            color: Colors.teal.shade100,
+            fontWeight: FontWeight.bold,
+            fontSize: 20.0,
+            letterSpacing: 2.5,
+          ),
+        ),
       ],
     ),
   ),
